@@ -8,15 +8,24 @@ It lets you right-click a folder and open it directly in the Codex desktop app.
 
 ## Install
 
-Open PowerShell in this folder and run:
+Run **OpenWithCodex.bat**.
+
+```cmd
+OpenWithCodex.bat
+```
+
+The default install is for the current Windows user only, so it does not need
+admin rights.
+
+If the context menu entry is already installed, the same batch file asks whether
+to uninstall, reinstall/update, or cancel.
+
+PowerShell alternative:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\Install-OpenWithCodex.ps1
 ```
-
-The default install is for the current Windows user only, so it does not need
-admin rights.
 
 ## Use
 
@@ -27,6 +36,14 @@ Right-click a folder, a drive, or empty space inside a folder, then choose:
 On Windows 11 it may appear under **Show more options**.
 
 ## Uninstall
+
+Run **OpenWithCodex.bat** again and choose uninstall.
+
+```cmd
+OpenWithCodex.bat
+```
+
+PowerShell alternative:
 
 ```powershell
 .\Install-OpenWithCodex.ps1 -Uninstall
