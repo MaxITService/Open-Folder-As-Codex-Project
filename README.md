@@ -4,6 +4,8 @@ Small Windows helper that adds **Open project in Codex** to File Explorer.
 
 It lets you right-click a folder and open it directly in the Codex desktop app.
 
+![Open project in Codex in the classic context menu](<Media-GitHub/How it works classical menu.png>)
+
 ## Install
 
 Open PowerShell in this folder and run:
@@ -52,10 +54,10 @@ Use a custom Codex Desktop path:
 
 ## Related Version
 
-Want the native Windows 11 modern context menu instead of **Show more options**?
-Use the separate modern package:
+This is the classic registry-based version.
 
-[Open-Folder-As-Codex-Project-Modern](https://github.com/MaxITService/Open-Folder-As-Codex-Project-Modern)
+Want a native Windows 11 modern context menu item instead of **Show more options**?
+Use [Open-Folder-As-Codex-Project-Modern](https://github.com/MaxITService/Open-Folder-As-Codex-Project-Modern).
 
 ## License
 
