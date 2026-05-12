@@ -8,24 +8,48 @@ It lets you right-click a folder and open it directly in the Codex desktop app.
 
 ## Install
 
-Run **OpenWithCodex.bat**.
+Run **OpenWithCodex.bat**:
 
 ```cmd
 OpenWithCodex.bat
 ```
 
-The default install is for the current Windows user only, so it does not need
-admin rights.
+---
+
+## Uninstall
+
+Run **OpenWithCodex.bat** again.
 
 If the context menu entry is already installed, the same batch file asks whether
 to uninstall, reinstall/update, or cancel.
 
-PowerShell alternative:
+The installer keeps the console open and writes a log to `open-with-codex.log`.
+
+## Useful Options
+
+Use a custom Codex Desktop path:
+
+```cmd
+OpenWithCodex.bat -CodexExe "C:\Path\To\Codex.exe"
+```
+
+Install for every user, from an elevated PowerShell:
 
 ```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\Install-OpenWithCodex.ps1
+.\Install-OpenWithCodex.ps1 -Scope AllUsers
 ```
+
+## What It Does
+
+The installer:
+
+1. finds Codex Desktop, or uses `-CodexExe`,
+2. adds **Open project in Codex** to the classic File Explorer context menu,
+3. registers folder, folder background, and drive entries,
+4. removes old broken entries from earlier versions of this script.
+
+The default install is for the current Windows user only, so it does not need
+admin rights.
 
 ## Use
 
@@ -35,32 +59,17 @@ Right-click a folder, a drive, or empty space inside a folder, then choose:
 
 On Windows 11 it may appear under **Show more options**.
 
-## Uninstall
+## PowerShell
 
-Run **OpenWithCodex.bat** again and choose uninstall.
-
-```cmd
-OpenWithCodex.bat
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\Install-OpenWithCodex.ps1
 ```
 
-PowerShell alternative:
+Uninstall:
 
 ```powershell
 .\Install-OpenWithCodex.ps1 -Uninstall
-```
-
-## Options
-
-Install for every user, from an elevated PowerShell:
-
-```powershell
-.\Install-OpenWithCodex.ps1 -Scope AllUsers
-```
-
-Use a custom Codex Desktop path:
-
-```powershell
-.\Install-OpenWithCodex.ps1 -CodexExe "C:\Path\To\Codex.exe"
 ```
 
 ## Notes
