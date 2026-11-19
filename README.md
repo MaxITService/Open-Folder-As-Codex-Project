@@ -98,3 +98,4 @@ MIT License.
 - [Console2Ai: Send PowerShell buffer to AI](https://github.com/MaxITService/Console2Ai)
 - [AI for Complete Beginners: Guide to LLMs](https://medium.com/@maxim.fomins/ai-for-complete-beginners-guide-llms-f19c4b8a8a79)
 - [Ping-Plotter: PowerShell-only ping plotting script](https://github.com/MaxITService/Ping-Plotter-PS51)
+- [Maxidian](https://github.com/MaxITService/Maxidian): Offline single-file Obsidian-compatible Markdown editor for the browser
